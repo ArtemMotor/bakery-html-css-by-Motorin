@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto!';
+}
+
+@font-face {
+  font-family: 'Roboto!';
+  src: local('Roboto');
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto!';
+  src: local('Roboto');
+  src: url('../fonts/Roboto-Bold.eot');
+  src: url('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Philosopher!';
+  src: local('Philosopher');
+  src: url('../fonts/Philosopher.eot');
+  src: url('Philosopher.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Philosopher.woff') format('woff'),
+    url('../fonts/Philosopher-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #ffe2b0;
+}
+
+header {
+  /* выровняй содержимое header по середине */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+li {
+  margin: 0px 100px 0px 0px;
+  display: inline;
+}
+
+li:last-child {
+  /* любой последний элемент li внутри родительского тега, например ol или ul, будет иметь margin 0px */
+  margin: 0px;
+}
+
+a:hover {
+  color: red;
+}
+
+.section-special-order {
+  height: 640px;
+  position: relative;
+  margin-bottom: 20px;
+
+  background: url(../img/01-Картинка-фона.jpg) center/cover no-repeat;
+
+  /* background-image: url(../img/01-Картинка-фона.jpg); */
+
+  /* Размести изображение в центре контейнера */
+  /* background-position: center; */
+
+  /* Не повторяй изображение в контейнере  */
+  /* background-repeat: no-repeat; */
+
+  /* Растягивай изображение на всё пространство контейнера в ширину и высоту*/
+  /* background-size: cover; */
+}
+
+.special-order-content {
+  width: 420px;
+  height: 190px;
+  background: linear-gradient(
+    180deg,
+    rgba(244, 213, 178, 0.8) 0%,
+    rgba(234, 156, 65, 0.8) 100%
+  );
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  padding-top: 15px;
+}
+
+.special-order-frame {
+  width: 390px;
+  height: 160px;
+  border: 1px solid #000000;
+
+  /* Перемести этот блочный элемент в центр по горизонтали своего родителя  */
+  margin: 0 auto;
+
+  padding: 17px 0px 0px 28px;
+  text-align: left;
+}
+
+.special-order-h3 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 9px;
+  font-family: 'Philosopher!';
+  font-weight: 400;
+}
+
+.special-order-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.section-description {
+  margin-bottom: 20px;
+}
+
+.section-description-logo-galery {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-description-logo-galery img {
+  /* Это значит возьми все img внутри .section-description-logo-galery и примени к ним указанные стили */
+
+  margin-right: 76px;
+}
+
+.section-description-logo-galery img:last-child {
+  /* Это значит, что каждый последний элемент img внутри .section-description-logo-galery будет иметь обнуленные внешние отступы */
+  margin: 0px;
+}
+
+.section-description-text h3 {
+  /* Это значит, что каждый элемент h3 внутри .section-description-text будет иметь указанные значения */
+  text-align: center;
+  font-size: 96px;
+  margin-bottom: 10px;
+  font-family: 'Philosopher!';
+  font-weight: 400;
+}
+
+.red {
+  /* Это универсальный класс. Его можно добавлять к любому элементу, чтобы покрасить цвет его текста в красный */
+  color: #f15b40;
+}
+
+.section-description-text p {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.section_map {
+  margin-bottom: 20px;
+}
+
+.section_map h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Philosopher!';
+  font-weight: 400;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #999999;
+  width: 1024px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 80px;
+}
+
+/* 
+Памятка по селекторам в CSS
+
+1. Селектор тега
+
+img{}
+
+2. Селектор класса
+
+.class-name{}
+
+3. Селектор, который применяет стили ко всем элементам на странице
+
+*{}
+
+4. Селектор уникального идентификатора(id)
+
+#id-name{} 
+
+5. Обращение к дочерним элементам выбранного селектора
+
+.selector-name element-in-selector-name{}
+
+Эта запись означает возьми все element-in-selector-name внутри .selector-name и примени к ним указанные стили
+
+*/
